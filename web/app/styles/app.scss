@@ -1,0 +1,78 @@
+.item{margin:5px;border-bottom: solid 1px #cdcdcd}
+.item .meta {font-style: italic;margin-top: 3px;}
+
+
+.left-panel {float:left; width:250px}
+
+
+.topics {
+	width:225px;
+	float:left;
+	border-radius: 4px;
+
+	span.button {border-radius: 4px;float:left; padding: 3px 6px;margin-right:8px;cursor:pointer;}
+	.inset{padding: 4px 0;cursor: pointer ; }
+	.inset-1{margin-left: 2px; font-size: 1.25em; }
+	.inset-2{margin-left: 12px; font-size: 1.1em;}
+	.inset-3{margin-left: 22px; font-size: 1em;}
+
+
+
+	.active {background-color: hsl(255,25%,70%);color:#333;border-radius: 2px;position:relative;}
+	.item.active {margin:5px -5px;border-bottom: none; padding: 0 10px;box-shadow: 0 2px 6px #000;}
+	.active:before, .active:after {
+		content: "";
+		position: absolute;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		top: 50%;
+		left: 100%;
+		margin-top: -10px;
+	}
+	.active:before {
+		border-left: 10px solid hsl(255,25%,70%);
+		margin-right: 5px;
+	}
+	.active:after{
+		border-left: 10px solid hsl(255,25%,70%);
+		margin-left: -4px;
+		z-index: 1000;
+	}
+
+
+}
+
+
+
+
+
+
+
+.main-panel {margin-left: 275px;width: 700px;}
+
+.slide {
+	font-size: 16px;
+
+	h1 {font-size: 48px;}
+	h2 {font-size: 32px; font-style: italic;}
+	h3 {font-size: 24px; font-style: italic; font-weight: bold; border-bottom: 2px solid #333;}
+	.orange {color: orange}
+}
+
+/* Common Colors
+----------------------------------------------- */
+.yellow {background-color: rgb(205,206,32);color:#000;}
+.black {background-color: rgb(30,30,30);color:#eee;}
+.grey {background-color: rgb(70,70,70);color:#eee;}
+.lt-grey {background-color: rgb(163,163,163);color:#333;}
+.green {background-color: hsl(120,50%,70%);color:#333;}
+.eggplant {background-color: hsl(255,25%,70%);color:#333;}
+
+.tab-orange{border-color: hsl(36,70%,50%);}
+.tab-yellow{border-color: hsl(65,70%,50%);}
+.tab-green{border-color: hsl(120,50%,50%);}
+.tab-azure{border-color: hsl(205,70%,50%);}
+.tab-blue{border-color: hsl(225,70%,50%);}
+.tab-indigo{border-color: hsl(250,70%,50%);}
+.tab-violet{border-color: hsl(260,70%,50%);}
+.tab-red{border-color: hsl(0,70%,50%);}

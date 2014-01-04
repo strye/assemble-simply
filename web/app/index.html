@@ -11,6 +11,22 @@
     <!-- endbuild -->
   </head>
   <body ng-app="webApp">
+  <div id="amazon-root"></div>
+  <script type="text/javascript">
+
+	  window.onAmazonLoginReady = function() {
+		  amazon.Login.setClientId('amzn1.application-oa2-client.4c6350dc04764684b04454b3c27053a0');
+	  };
+	  (function(d) {
+		  var a = d.createElement('script'); a.type = 'text/javascript';
+		  a.async = true; a.id = 'amazon-login-sdk';
+		  a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+		  d.getElementById('amazon-root').appendChild(a);
+	  })(document);
+
+	  var User = {name: '', email: ''}
+  </script>
+
     <!--[if lt IE 9]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
@@ -19,8 +35,11 @@
     <!-- Add your site or application content here -->
     <div class="container" ng-view></div>
 
+	<script src="components/marked/marked.js"></script>
     <script src="components/angular/angular.js"></script>
-    <script src="components/angular-resource/angular-resource.js"></script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular-route.js"></script>
+	<script src="components/angular-resource/angular-resource.js"></script>
     <script src="components/angular-cookies/angular-cookies.js"></script>
     <script src="components/angular-sanitize/angular-sanitize.js"></script>
 
@@ -28,7 +47,15 @@
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+
+	<script src="scripts/services/meetings.js"></script>
+	<script src="scripts/services/agenda.js"></script>
+
     <script src="scripts/controllers/main.js"></script>
+	<script src="scripts/controllers/meeting.js"></script>
+  <script src="scripts/controllers/s3test.js"></script>
+
+
     <!-- endbuild -->
 
   </body>

@@ -1,9 +1,27 @@
 <div class="hero-unit">
 	<h1>AWS Demo using the javascript sdk from the browser</h1>
+</div>
+
+<div>
+	to login and sample the demo please click here
+	<a href="#" id="LoginWithAmazon">
+		<img border="0" alt="Login with Amazon"
+		     src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
+		     width="156" height="32" ng-click="amazonLogin()" />
+	</a>
+
+	<p>Available Meetings</p>
+	<ul>
+		<li ng-repeat="meeting in meetings" ng-click="OpenMeeting(meeting.id)">{{meeting.id}}</li></a>
+	</ul>
+	<button ng-click="testmeeting()">Test Add</button>
+	<button ng-click="loadMeetings()">Load</button>
+	<button ng-click="gotoS3Test()">S3 Test</button>
+
 	<p>Goals of the demo</p>
 	<ul>
 		<li ng-repeat="goal in projectGoals">{{goal}}</li>
 	</ul>
 
-	<button ng-click="enterDemo()">Enter Demo</button>
+
 </div>
